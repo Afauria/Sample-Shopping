@@ -36,7 +36,6 @@
 <script lang="ts">
 import { ref, defineComponent } from "vue";
 export default defineComponent({
-  name: "Header",
   props: {
     msg: {
       type: String,

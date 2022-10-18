@@ -14,7 +14,6 @@
 import { defineComponent } from "vue";
 // import { ProductInfo } from "../store/product";
 export default defineComponent({
-  name: "Product",
   props: {
     //info可能为undefiend，使用的时候需要加!或者?
     //可以使用ProductInfo类声明变量类型

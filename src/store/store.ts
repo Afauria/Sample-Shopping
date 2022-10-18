@@ -23,8 +23,8 @@ const getters = {
     return getFilterArray(brands);
   },
   colors(state: any) {
-    const brands = state.productList.map((item: any) => item.color);
-    return getFilterArray(brands);
+    const colors = state.productList.map((item: any) => item.color);
+    return getFilterArray(colors);
   }
 };
 

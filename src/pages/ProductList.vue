@@ -51,7 +51,6 @@ import Product from "../components/Product.vue";
 import { useStore } from "vuex";
 
 export default defineComponent({
-  name: "HelloWorld",
   components: {
     Product
   },
@@ -112,12 +111,6 @@ export default defineComponent({
       } else {
         this.filterColor = rule;
       }
-    }
-  },
-  props: {
-    msg: {
-      type: String,
-      required: true
     }
   },
   setup: () => {

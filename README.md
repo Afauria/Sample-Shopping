@@ -2,8 +2,11 @@
 
 ## 初始化工程
 
-1. vite脚手架初始化工程：npm init @vitejs/app
-2. npm run dev运行报错解决：node .\node_modules\esbuild\install.js
+1. vite脚手架初始化工程：`npm create vite Sample-Shopping --template vue-ts`。`npm create`等价于`npm init`。
+
+> npm create原理：会找到vite包运行`package.json`中配置的`create-vite`命令
+
+1. `npm run dev`运行报错解决：`node .\node_modules\esbuild\install.js`
 
 ```shell
 > sample-shopping@0.0.0 dev
@@ -31,20 +34,26 @@ Emitted 'error' event on ChildProcess instance at:
 ## 知识点
 
 1. Vue3响应式数据声明：reactive和ref
+   * reactive和ref可以监听属性，reactive监听复杂数据类型，ref监听基本数据类型
 
-* reactive和ref可以监听属性，reactive监听复杂数据类型，ref监听基本数据类型
 
 2. v-show和v-if
 
-* v-show通过css隐藏标签：适用于需要显示/隐藏的标签
-* v-if是直接移除元素
-* `<template>`标签不会渲染，直接渲染内容，无法通过css控制显示隐藏，因此只能用v-if
+   * v-show通过css隐藏标签：适用于需要显示/隐藏的标签
+
+   * v-if是直接移除元素
+
+   * `<template>`标签不会渲染，直接渲染内容，无法通过css控制显示隐藏，因此只能用v-if
+
 
 3. computed和method
 
-* 计算属性有缓存，数据改变才会刷新
-* 方法没缓存，每次都需要执行方法
-* 计算属性不能传递参数，传参需要使用闭包，即返回一个函数
+   * 计算属性有缓存，数据改变才会刷新
+
+   * 方法没缓存，每次都需要执行方法
+
+   * 计算属性不能传递参数，传参需要使用闭包，即返回一个函数
+
 
 ```typescript
 cacheSome () {
@@ -65,7 +74,7 @@ cacheSome () {
 * 声明any可以跳过类型检查
 * 自定义声明文件，声明接口（太麻烦）
 
-Vue+TS太折腾，网上的资料比较少，遇到问题只能自己解决，业余前端的我决定暂时弃用TS。
+Vue+TS太折腾，网上的资料比较少，遇到问题只能自己解决。
 
 2. 使用vuex getters显示数据，action异步获取数据的时候，视图不更新
 
@@ -105,6 +114,4 @@ const mutations = {
    const store = useStore();
    ```
 
-   
-
-   
+​     
